@@ -1,0 +1,23 @@
+upstream eventosgg_app {
+    server 127.0.0.1:8000;
+}
+
+# HTTP Server
+server {
+    listen 80;
+    rewrite ^(.*) https://$host$1 permanent;
+}
+server {
+    server_name  app.eventos.gg;
+    listen 443;
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/app.eventos.gg/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/app.eventos.gg/privkey.pem;
+    charset UTF-8;
+    location / {
+        proxy_pass http://eventosgg_app;
+        proxy_redirect off;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}

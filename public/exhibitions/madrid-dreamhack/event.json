@@ -1,0 +1,17 @@
+{
+  "thumbnail_title" : "DreamHack Valencia",
+  "thumbnail_subtitle" : "Madrid - Valencia",
+  "thumbnail_content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc felis, ultricies malesuada quam id, scelerisque euismod lorem. Integer et nisi eu eros dapibus ornare eget lobortis ante. Cras ac odio non nisl finibus blandit.",
+  "thumbnail_price" : "23",
+  "thumbnail_seats_limit" : "60",
+  "thumbnail_travel_time" : "2h",
+
+  "title" : "DreamHack Valencia",
+  "subtitle" : "Madrid - Valencia",
+
+  "stripe_amount" : "2000",
+  "stripe_name" : "DreamHack Valencia",
+  "stripe_description" : "Viaje desde Madrid",
+  "stripe_currency" : "eur",
+  "stripe_amount" : "2000"
+}

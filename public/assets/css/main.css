@@ -1,0 +1,169 @@
+html, body {
+  height: 100%;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 10px 15px;
+  width: auto;
+}
+.content-navbar-fixed-top{
+  margin-top:50px;
+}
+.container-fluid .jumbotron{
+  margin: 0px -15px;
+  border-radius: 0px;
+  text-align: center;
+  padding: 60px 60px;
+  color:white;
+  background: rgba(0,0,0,0);
+}
+.jumbotron :first-child{
+  margin-top:0px;
+}
+.jumbotron :last-child{
+  margin-bottom:0px;
+}
+.main-content{
+  margin:15px;
+}
+.container-fluid .breadcrumb{
+  margin: 0px -15px;
+  border-radius: 0px;
+}
+
+
+.layout-float-form{
+  background: url('/assets/img/pattern.jpg');
+  min-height: 100%;
+}
+
+.main-content{
+  min-height: 100%;
+}
+
+.has-error a{
+  color:#ff4136;
+}
+
+.has-error label{
+  color:#ff4136;
+}
+
+.emoji-xs{
+  font-size:10px;
+}
+.emoji-s{
+  font-size:20px;
+}
+.emoji-m{
+  font-size:40px;
+}
+.emoji-l{
+  font-size:60px;
+}
+.emoji-xl{
+  font-size:80px;
+}
+.emoji-xxl{
+  font-size:100px;
+}
+
+.sweet-alert .sa-icon.sa-custom{
+  width:50px !important;
+  height:50px !important;
+}
+.sweet-alert{
+  padding: 25px !important;
+}
+.swal2-popup .swal2-styled:focus{
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.text-xxl{
+  font-size:50px;
+}
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus{
+  border-color: #158cba;
+}
+
+
+.event-header{
+  margin:-20px -15px 0px -15px;
+  border-bottom: 1px solid #000;
+  height: 200px;
+  overflow: hidden;
+}
+.event-header img{
+  width:100%;
+  min-height: 200px;
+  min-width:600px;
+}
+
+.event-description{
+  margin-bottom: 100px;
+}
+.event-purchase{
+  margin-top: -75px;
+}
+.event-reservation{
+  margin-top: -75px;
+}
+.event-thumbnail{
+  background-color: rgba(255,255,255,0.9);
+  padding:20px;
+  border-radius: 10px;
+  *color:white;
+}
+.event-thumbnail .header{
+  background-color: #fff;
+  padding:20px;
+  border-radius: 10px;
+
+}
+.bold{
+  font-weight: bold;
+}
+.main-content{
+  *background: url('/events/madrid-dreamhack/background.jpg');
+}
+.navbar{
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+.btn-rounded{
+  border-radius: 18px;
+}
+.btn-lg.btn-rounded{
+  border-radius: 27px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.bg-full {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('http://eventos.gg/eventosgg/images/uploads/8a8d03b9374c6957da13051c0fbc8aa9.jpg');
+    position:fixed;
+    z-index: 0;
+    top:0px;
+    left:0px;
+    width:100%;
+    background-color: #000;
+
+    height: 100%;
+    overflow: auto;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+input.btn:focus,input.btn:active{
+  outline: none !important;
+}

@@ -1,0 +1,112 @@
+<template name="adminExhibitionsAdd">
+  <ul class="breadcrumb">
+    <li><a href="/admin/exhibitions">{{_ 'admin_breadcrumb_exhibitions'}}</a></li>
+    <li class="active"><a href="/admin/exhibitions/add">{{_ 'admin_breadcrumb_exhibitions_add'}}</a></li>
+  </ul>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="m-t-0">{{_ 'admin_exhibitions_add_title'}}</h4>
+      </div>
+    </div>
+    <hr class="m-t-10"/>
+    <form>
+      <div class="form-group {{errorClass 'fullName'}}">
+        <label for="title text">{{_ 'fullName'}}</label>
+        <input type="text" class="form-control input-lg" id="fullName" name="fullName" placeholder="{{_ 'fullName_placeholder'}}" value="{{exhibition.fullName}}"/>
+        <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="form-group {{errorClass 'slug'}}">
+            <label for="title">{{_ 'slug'}} <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="slug" name="slug" placeholder="{{_ 'slug_placeholder'}}" value="{{exhibition.slug}}" required/>
+            <span class="help-block">{{_ 'the_url_will_be'}}: https://app.eventos.gg/exhibition/{{sessionSlug}}/</span>
+            <span class="help-block">{{errorMessage 'slug'}}</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group {{errorClass 'status'}}">
+            <label for="status">{{_ 'status'}}</label>
+            <select class="form-control" id="status" name="status">
+              <option value="inactive">{{_ 'inactive'}}</option>
+              <option value="active">{{_ 'active'}}</option>
+            </select>
+            <span class="help-block">{{errorMessage 'title'}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_add_thumbnail_data_title'}}</h5>
+          <hr/>
+          <div class="form-group {{errorClass 'thumbnail_img_url'}}">
+            <label for="title">{{_ 'thumbnail_img_url'}}</label>
+            <input type="text" class="form-control" id="thumbnail_img_url" name="thumbnail_img_url" placeholder="{{_ 'thumbnail_img_url_placeholder'}}" value="{{exhibition.thumbnail_img_url}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_img_url'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'thumbnail_title'}}">
+            <label for="title">{{_ 'thumbnail_title'}}</label>
+            <input type="text" class="form-control" id="thumbnail_title" name="thumbnail_title" placeholder="{{_ 'thumbnail_title_placeholder'}}" value="{{exhibition.thumbnail_title}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_title'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'thumbnail_subtitle'}}">
+            <label for="title">{{_ 'thumbnail_subtitle'}}</label>
+            <input type="text" class="form-control" id="thumbnail_subtitle" name="thumbnail_subtitle" placeholder="{{_ 'thumbnail_subtitle_placeholder'}}" value="{{exhibition.thumbnail_subtitle}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_subtitle'}}</span>
+          </div>
+
+          <div class="form-group {{errorClass 'thumbnail_start_date'}}">
+            <label for="title">{{_ 'thumbnail_start_date'}}</label>
+            <input type="text" class="form-control" id="thumbnail_start_date" name="thumbnail_start_date" placeholder="{{_ 'thumbnail_start_dateplaceholder'}}" value="{{exhibition.thumbnail_start_date}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_start_date'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'thumbnail_end_date'}}">
+            <label for="title">{{_ 'thumbnail_end_date'}}</label>
+            <input type="text" class="form-control" id="thumbnail_end_date" name="thumbnail_end_date" placeholder="{{_ 'thumbnail_end_date_placeholder'}}" value="{{exhibition.thumbnail_end_date}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_end_date'}}</span>
+          </div>
+
+          <div class="form-group {{errorClass 'thumbnail_content'}}">
+            <label for="title">{{_ 'thumbnail_content'}}</label>
+            <input type="text" class="form-control" id="thumbnail_content" name="thumbnail_content" placeholder="{{_ 'thumbnail_content_placeholder'}}" value="{{exhibition.thumbnail_content}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_content'}}</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_add_page_data_title'}}</h5>
+          <hr/>
+
+
+          <div class="form-group {{errorClass 'page_img_url'}}">
+            <label for="title">{{_ 'page_img_url'}}</label>
+            <input type="text" class="form-control" id="page_img_url" name="page_img_url" placeholder="{{_ 'page_img_url_placeholder'}}" value="{{exhibition.page_img_url}}"/>
+            <span class="help-block">{{errorMessage 'page_img_url'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'page_title'}}">
+            <label for="title">{{_ 'page_title'}}</label>
+            <input type="text" class="form-control" id="page_title" name="page_title" placeholder="{{_ 'page_title_placeholder'}}" value="{{exhibition.page_title}}"/>
+            <span class="help-block">{{errorMessage 'page_title'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'page_subtitle'}}">
+            <label for="title">{{_ 'page_subtitle'}}</label>
+            <input type="text" class="form-control" id="page_subtitle" name="page_subtitle" placeholder="{{_ 'page_subtitle_placeholder'}}" value="{{exhibition.page_subtitle}}"/>
+            <span class="help-block">{{errorMessage 'page_subtitle'}}</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <hr/>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="/admin/exhibitions" class="btn btn-default">{{_ 'back'}}</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <input type="submit" class="btn btn-success" value="{{_ 'admin_exhibitions_add_button'}}"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

@@ -1,0 +1,67 @@
+<template name="trip">
+  <div class="event-header" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{trip.page_img_url}}');">
+    <div class="m-50">
+      <h1 class="white">{{trip.page_title}}</h1>
+      <h3 class="white m-0">{{trip.page_subtitle}}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7 event-description">
+      <div class="m-t-10 m-b-10">
+        {{{trip.page_content_html}}}
+      </div>
+    </div>
+    <div class="col-md-5 event-reservation hidden">
+      <div class="panel panel-default">
+        <div class="panel-heading bg-black">
+          <h2 class="m-t-0 m-b-0 text-center">{{_ 'reservation_title'}}</h2>
+        </div>
+        <div class="panel-body text-center">
+          <h1 class="emoji-xxl">🎉</h1>
+          <h4>{{_ 'reservation_subtitle'}}</h4>
+          <p>{{_ 'reservation_content'}}</p>
+          <div class="">
+            <a href="/" class="btn btn-primary btn-rounded btn-block">{{_ 'back'}}</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 event-purchase">
+      <div class="panel panel-default border-black">
+        <div class="panel-heading bg-black">
+          <h2 class="m-t-0 m-b-0 text-center white">{{_ 'purchase_trip_title'}}</h2>
+        </div>
+        <div class="panel-body">
+          <form>
+            <p class=" text-center">{{_ 'purchase_trip_subtitle'}}</p>
+            <div class="form-group {{errorClass 'firstName'}}">
+              <label for="email">{{_ 'firstName'}}</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="{{_ 'firstName_placeholder'}}"/>
+              <span class="help-block">{{errorMessage 'firstName'}}</span>
+            </div>
+            <div class="form-group {{errorClass 'lastName'}}">
+              <label for="password">{{_ 'lastName'}}</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="{{_ 'lastName_placeholder'}}"/>
+              <span class="help-block">{{errorMessage 'lastName'}}</span>
+            </div>
+            <div class="form-group {{errorClass 'email'}}">
+              <label for="password">{{_ 'email'}}</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="{{_ 'email_placeholder'}}"/>
+              <span class="help-block">{{errorMessage 'email'}}</span>
+            </div>
+            <div class="checkbox {{errorClass 'terms'}}">
+              <label><input type="checkbox" value="" name="terms" id="terms"/>{{{_ 'accept_terms_html'}}}</label>
+            </div>
+            <div class="text-center">
+              <input type="submit" class="btn btn-primary btn-rounded bg-orange white btn-block" value="{{_ 'purchase_trip'}}"/>
+            </div>
+            <div class="text-right m-t-10">
+              <img src="/assets/img/creditcards_banner.png" width="120px"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

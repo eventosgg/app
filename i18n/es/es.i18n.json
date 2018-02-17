@@ -1,0 +1,98 @@
+{
+
+  "back" : "Volver",
+  "seats" : "Plazas",
+
+  "navbar_exhibitions" : "Eventos",
+
+  "welcome_title" : "¿Te lo vas a perder?",
+  "welcome_subtitle" : "Descubre y organiza tu viaje a los próximos eventos gaming. Apúntate y no te lo pierdas, la revolución está aquí.",
+  "welcome_button" : "Descubre los próximos eventos",
+
+  "exhibitions_title" : "Próximos eventos",
+  "exhibitions_subtitle" : "Elige el próximo evento gamer que vas a disfrutar",
+
+  "navbar_admin_exhibitions" : "Eventos",
+  "navbar_admin_users" : "Usuarios",
+
+  "admin_breadcrumb_exhibitions" : "Eventos",
+  "admin_exhibitions_title" : "Administrar Eventos",
+  "admin_exhibitions_add_button" : "Añadir Evento",
+  "admin_exhibitions_table_header_trips_count" : "Viajes",
+
+  "admin_exhibitions_active" : "Activo",
+  "admin_exhibitions_inactive" : "Inactivo",
+
+  "admin_exhibitions_table_header_slug" : "Slug",
+  "admin_exhibitions_table_header_name" : "Nombre",
+
+  "admin_breadcrumb_exhibitions_add" : "Añadir evento",
+
+  "admin_exhibitions_trips_title" : "Viajes",
+  "admin_exhibitions_trip_add_button" : "Añadir viaje",
+  "admin_exhibitions_trips_table_header_tripSlug" : "slug",
+  "admin_exhibitions_trips_table_header_name" : "Nombre",
+  "admin_exhibitions_trips_table_header_seats" : "Plazas",
+  "admin_exhibitions_trips_table_header_seats_limit" : "Max.Plazas",
+
+  "admin_exhibitions_add_title" : "Añadir Evento",
+  "admin_exhibitions_add_system_data_title" : "Datos del Sistema",
+  "slug" : "Slug (identificador)",
+  "slug_placeholder" : "Introduce aquí tu identificador",
+  "the_url_will_be" : "La url será",
+  "fullName" : "Nombre",
+  "fullName_placeholder" : "Introduce aquí el nombre",
+  "status" : "Estado",
+  "admin_exhibitions_add_thumbnail_data_title" : "Datos de la Minuatura",
+  "thumbnail_img_url" : "Imagen miniatura (URL)",
+  "thumbnail_img_url_placeholder" : "http://www.example.org/image.jpg",
+  "thumbnail_title" : "Titulo",
+  "thumbnail_title_placeholder" : "Introduce un título",
+  "thumbnail_subtitle" : "Subtitulo",
+  "thumbnail_subtitle_placeholder" : "Introduce un Subtítulo",
+  "thumbnail_start_date" : "Fecha inicio",
+  "thumbnail_start_date_placeholder" : "Escoge la fecha inicio",
+  "thumbnail_end_date" : "Fecha fin",
+  "thumbnail_end_date_placeholder" : "Escoge la fecha fin",
+  "thumbnail_content" : "Contenido (html)",
+  "thumbnail_content_placeholder" : "Introduce aquí el contenido",
+  "admin_exhibitions_add_page_data_title" : "Datos de la Página del Evento",
+  "page_img_url" : "Imagen de fondo",
+  "page_img_url_placeholder" : "http://www.example.org/image.jpg",
+  "page_title" : "Título",
+  "page_title_placeholder" : "Introduce un título",
+  "page_subtitle" : "Subtítulo",
+  "page_subtitle_placeholder" : "Introduce un Subtítulo",
+
+  "book_trip" : "Reservar Viaje",
+
+  "view_trips_button" : "Ver trayectos",
+
+  "purchase_trip_title" : "Haz tu reserva",
+  "purchase_trip_subtitle" : "Rellena el formulario",
+  "firstName" : "Nombre",
+  "firstName_placeholder" : "Escribe aquí tu nombre",
+  "error_firstName_empty" : "Es necesario escribir tu nombre",
+  "error_firstName_size" : "El campo nombre debe contener entre 2 y 150 caracteres",
+
+  "lastName" : "Apellidos",
+  "lastName_placeholder" : "Escribe aquí tu apellido",
+  "error_lastName_empty" : "Es necesario escribir los apellidos",
+  "error_lastName_size" : "El campo apellido debe contener entre 3 y 150 caracteres",
+
+  "email" : "Correo electrónico",
+  "email_placeholder" : "Escribe aquí tu correo electrónico",
+  "error_email_empty" : "Es necesario escribir tu correo electrónico",
+  "error_email_size" : "El campo correo electrónico debe contener entre 3 y 150 caracteres",
+
+  "accept_terms_html" : "Acepto los términos de uso",
+  "purchase_trip" : "Hacer Reserva",
+
+  "" : "",
+  "" : "",
+  "" : "",
+  "" : "",
+
+  "" : "",
+  "" : ""
+}

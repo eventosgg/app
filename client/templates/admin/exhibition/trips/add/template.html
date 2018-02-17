@@ -1,0 +1,152 @@
+<template name="adminExhibitionTripsAdd">
+  <ul class="breadcrumb">
+    <li><a href="/admin/exhibitions">{{_ 'admin_breadcrumb_exhibitions'}}</a></li>
+    <li><a href="/admin/exhibition/{{exhibition.slug}}">{{exhibition.fullName}}</a></li>
+    <li class="active"><a href="/admin/exhibition/{{exhibition.slug}}/add">{{_ 'admin_breadcrumb_exhibitions_trips_add'}}</a></li>
+  </ul>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="m-t-0">{{_ 'admin_exhibitions_trips_add_title'}}</h4>
+      </div>
+    </div>
+    <hr class="m-t-10"/>
+    <form>
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_trips_add_system_data_title'}}</h5>
+          <hr/>
+          <div class="form-group {{errorClass 'tripSlug'}}">
+            <label for="title">{{_ 'tripSlug'}}</label>
+            <input type="text" class="form-control" id="tripSlug" name="tripSlug" placeholder="{{_ 'tripSlug_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'tripSlug'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'fullName'}}">
+            <label for="title">{{_ 'fullName'}}</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="{{_ 'fullName_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'fullName'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'status'}}">
+            <label for="status">{{_ 'status'}}</label>
+            <select class="form-control" id="status" name="status">
+              <option value="inactive">{{_ 'inactive'}}</option>
+              <option value="active">{{_ 'active'}}</option>
+            </select>
+            <span class="help-block">{{errorMessage 'title'}}</span>
+          </div>
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_trips_add_thumbnail_data_title'}}</h5>
+          <hr/>
+          <div class="form-group {{errorClass 'thumbnail_img_url'}}">
+            <label for="title">{{_ 'thumbnail_img_url'}}</label>
+            <input type="text" class="form-control" id="thumbnail_img_url" name="thumbnail_img_url" placeholder="{{_ 'thumbnail_img_url_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_img_url'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'thumbnail_title'}}">
+            <label for="title">{{_ 'thumbnail_title'}}</label>
+            <input type="text" class="form-control" id="thumbnail_title" name="thumbnail_title" placeholder="{{_ 'thumbnail_title_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_title'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'thumbnail_subtitle'}}">
+            <label for="title">{{_ 'thumbnail_subtitle'}}</label>
+            <input type="text" class="form-control" id="thumbnail_subtitle" name="thumbnail_subtitle" placeholder="{{_ 'thumbnail_subtitle_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_subtitle'}}</span>
+          </div>
+
+          <div class="form-group {{errorClass 'thumbnail_start_date'}}">
+            <label for="title">{{_ 'thumbnail_start_date'}}</label>
+            <input type="text" class="form-control" id="thumbnail_start_date" name="thumbnail_start_date" placeholder="{{_ 'thumbnail_start_dateplaceholder'}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_start_date'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'thumbnail_end_date'}}">
+            <label for="title">{{_ 'thumbnail_end_date'}}</label>
+            <input type="text" class="form-control" id="thumbnail_end_date" name="thumbnail_end_date" placeholder="{{_ 'thumbnail_end_date_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_end_date'}}</span>
+          </div>
+
+          <div class="form-group {{errorClass 'thumbnail_content'}}">
+            <label for="title">{{_ 'thumbnail_content'}}</label>
+            <input type="text" class="form-control" id="thumbnail_content" name="thumbnail_content" placeholder="{{_ 'thumbnail_content_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'thumbnail_content'}}</span>
+          </div>
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_trips_add_stripe_data_title'}}</h5>
+          <hr/>
+          <div class="form-group {{errorClass 'stripe_name'}}">
+            <label for="title">{{_ 'stripe_name'}}</label>
+            <input type="text" class="form-control" id="stripe_name" name="stripe_name" placeholder="{{_ 'stripe_name_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'stripe_name'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'stripe_description'}}">
+            <label for="title">{{_ 'stripe_description'}}</label>
+            <input type="text" class="form-control" id="stripe_description" name="stripe_description" placeholder="{{_ 'stripe_description_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'stripe_description'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'stripe_currency'}}">
+            <label for="title">{{_ 'stripe_currency'}}</label>
+            <select class="form-control" id="stripe_currency" name="stripe_currency">
+              <option value="eur">{{_ 'euro'}}</option>
+            </select>
+            <span class="help-block">{{errorMessage 'stripe_currency'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'stripe_amount'}}">
+            <label for="title">{{_ 'stripe_amount'}}</label>
+            <input type="text" class="form-control" id="stripe_amount" name="stripe_amount" placeholder="{{_ 'stripe_amount_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'stripe_amount'}}</span>
+          </div>
+
+        </div>
+        <div class="col-md-8">
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_trips_add_seats_title'}}</h5>
+          <hr/>
+          <div class="form-group {{errorClass 'seats_limit'}}">
+            <label for="title">{{_ 'seats_limit'}}</label>
+            <input type="text" class="form-control" id="seats_limit" name="seats_limit" placeholder="{{_ 'seats_limit_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'seats_limit'}}</span>
+          </div>
+
+          <h5 class="m-t-20">{{_ 'admin_exhibitions_trips_add_page_data_title'}}</h5>
+          <hr/>
+          <div class="form-group {{errorClass 'page_img_url'}}">
+            <label for="title">{{_ 'page_img_url'}}</label>
+            <input type="text" class="form-control" id="page_img_url" name="page_img_url" placeholder="{{_ 'page_img_url_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'page_img_url'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'page_title'}}">
+            <label for="title">{{_ 'page_title'}}</label>
+            <input type="text" class="form-control" id="page_title" name="page_title" placeholder="{{_ 'page_title_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'page_title'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'page_subtitle'}}">
+            <label for="title">{{_ 'page_subtitle'}}</label>
+            <input type="text" class="form-control" id="page_subtitle" name="page_subtitle" placeholder="{{_ 'page_subtitle_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'page_subtitle'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'page_start_date'}}">
+            <label for="title">{{_ 'page_start_date'}}</label>
+            <input type="text" class="form-control" id="page_start_date" name="page_start_date" placeholder="{{_ 'page_start_date_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'page_start_date'}}</span>
+          </div>
+          <div class="form-group {{errorClass 'page_end_date'}}">
+            <label for="title">{{_ 'page_end_date'}}</label>
+            <input type="text" class="form-control" id="page_end_date" name="page_end_date" placeholder="{{_ 'page_end_date_placeholder'}}"/>
+            <span class="help-block">{{errorMessage 'page_end_date'}}</span>
+          </div>
+
+          <div class="form-group {{errorClass 'page_content_html'}}">
+            <label for="title">{{_ 'page_content_html'}}</label>
+            <textarea class="form-control" id="page_content_html" name="page_content_html" placeholder="{{_ 'page_content_htmle_placeholder'}}"></textarea>
+            <span class="help-block">{{errorMessage 'page_content_html'}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <a href="/admin/exhibitions" class="btn btn-default">{{_ 'back'}}</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <input type="submit" class="btn btn-success" value="{{_ 'admin_exhibitions_add_button'}}"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

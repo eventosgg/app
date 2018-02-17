@@ -1,0 +1,49 @@
+<template name="adminExhibitions">
+  <ul class="breadcrumb">
+    <li class="active"><a href="/admin/exhibitions">{{_ 'admin_breadcrumb_exhibitions'}}</a></li>
+  </ul>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="m-t-0">{{_ 'admin_exhibitions_title'}}</h4>
+      </div>
+      <div class="col-sm-6 text-right">
+        <a href="/admin/exhibitions/add" class="btn btn-success btn-sm">{{_ 'admin_exhibitions_add_button'}}</a>
+      </div>
+    </div>
+    <hr class="m-t-10"/>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="w-1">{{_ 'admin_exhibitions_table_header_slug'}}</th>
+          <th class="w-1"></th>
+          <th>{{_ 'admin_exhibitions_table_header_name'}}</th>
+          <th class="w-1">{{_ 'admin_exhibitions_table_header_trips_count'}}</th>
+          <th class="w-1"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each exhibitions}}
+          {{> adminExhibitionsRow}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<template name="adminExhibitionsRow">
+  <tr>
+    <th>
+      <a href="/admin/exhibition/{{slug}}">
+        {{slug}}
+      </a>
+    </th>
+    <td>{{status}}</td>
+    <td>{{title}}</td>
+    <td class="text-nowrap">{{countTrips}} {{_ 'trips'}}</td>
+    <td>
+      <a href="#" data-id="{{_id}}" class="exhibition-delete btn btn-danger btn-xs">{{_ 'delete'}}</a>
+    </td>
+  </tr>
+</template>

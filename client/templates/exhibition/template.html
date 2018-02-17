@@ -1,0 +1,40 @@
+<template name="exhibition">
+  <div class="bg-full" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{exhibition.page_img_url}}');">
+    <div class="jumbotron">
+      <h1>{{exhibition.page_title}}</h1>
+      <p>{{exhibition.page_subtitle}}</p>
+    </div>
+    <div class="main-content">
+      <div class="row center-block">
+        {{#each exhibition.trips}}
+          {{> tripThumbnail}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="tripThumbnail">
+  <div class="col-sm-4">
+    <div class="event-thumbnail text-center">
+      <div class="m-40">
+        <img src="{{thumbnail_img_url}}" class="img-responsive img-rounded"/>
+      </div>
+      <h3 class="m-t-10 m-b-10 orange">{{thumbnail_title}}</h3>
+      <p class="m-b-0">{{thumbnail_start_date}} - {{thumbnail_start_date}}</p>
+      <h4 class="m-t-10">{{thumbnail_subtitle}}</h4>
+      <div class="m-t-10 m-b-10">
+        {{{thumbnail_content}}}
+      </div>
+      <div class="progress active m-b-0 h-10">
+        <div class="progress-bar bg-orange" style="width: {{seatsProgress}}%"></div>
+      </div>
+      <p class="m-t-10 text-right">
+        {{seatsCount}} / {{seats_limit}} {{_ 'seats'}}
+      </p>
+      <div>
+        <a href="/exhibition/{{sessionExhibitionSlug}}/trip/{{tripSlug}}" class="btn bg-orange btn-block btn-rounded white">{{_ 'book_trip'}}</a>
+      </div>
+    </div>
+  </div>
+</template>

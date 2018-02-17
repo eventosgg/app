@@ -1,0 +1,33 @@
+<template name="exhibitions">
+  <div class="bg-full">
+    <div class="jumbotron">
+      <h1>{{_ 'exhibitions_title'}}</h1>
+      <p>{{_ 'exhibitions_subtitle'}}</p>
+    </div>
+    <div class="main-content">
+      <div class="row">
+        {{#each exhibitions}}
+          {{> exhibitionThumbnail}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="exhibitionThumbnail">
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="event-thumbnail text-center">
+      <div>
+        <img src="{{thumbnail_img_url}}" class="img-rounded w-100p"/>
+      </div>
+      <h3 class="m-t-20">{{thumbnail_title}}</h3>
+      <p class="">{{thumbnail_subtitle}}</p>
+      <p class="">{{thumbnail_start_date}} - {{thumbnail_end_date}}</p>
+      <p class="">{{thumbnail_content}}</p>
+      <div class="m-t-20">
+        <a href="/exhibition/{{slug}}/" class="btn btn-primary btn-block bg-orange white btn-rounded">{{_ 'view_trips_button'}}</a>
+      </div>
+    </div>
+  </div>
+</template>
